@@ -97,7 +97,7 @@ else:
             """
             
             # CORREGIDO: Alineación perfecta y nombre correcto del modelo
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-1.5-flash')
             response = model.generate_content(prompt_con_contexto)
             respuesta_ia = response.text
             
