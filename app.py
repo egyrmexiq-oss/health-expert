@@ -8,7 +8,7 @@ st.set_page_config(page_title="HealthExpert AI", page_icon="🩺", layout="cente
 # --- CONFIGURACIÓN DE LA API (SECRETS) ---
 # Intentamos obtener la API Key de los secretos de Streamlit
 try:
-    api_key = ["AIzaSyCaH-yamU5g52nr192ImyuWyBZp7dHrW9Q"]
+    api_key = st.secrets["GEMINI_API_KEY"]
     genai.configure(api_key=api_key)
 except KeyError:
     st.error("⚠️ Error: No se encontró la API Key. Configúrala en los 'Secrets' de Streamlit.")
